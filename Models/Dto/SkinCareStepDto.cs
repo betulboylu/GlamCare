@@ -1,14 +1,16 @@
 ﻿using System;
-
-/// <summary>
-/// Contains steps for each routine
-/// </summary>
-public class SkinCareStepDto
+namespace GlamCare.Models
 {
-    public int StepId { get; set; }
-    public int StepOrder { get; set; }
-    public string Description { get; set; }
-    public string TrendyolProductUrl { get; set; }
-    public string YouTubeVideoUrl { get; set; }
-    public int TotalSteps { get; set; }
+    /// <summary>
+    /// Contains steps for each routine
+    /// </summary>
+    public class SkinCareStepDto
+    {
+        public int StepId { get; set; }
+        public int StepOrder { get; set; }
+        public string Description { get; set; }
+        public string TrendyolProductUrl { get; set; }
+        public string YouTubeVideoUrl { get; set; }
+        public int TotalSteps { get; set; }
+    }
 }

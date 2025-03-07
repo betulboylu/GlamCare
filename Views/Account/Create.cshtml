@@ -1,0 +1,83 @@
+﻿@model ProfileDto
+
+@{
+    ViewData["Title"] = "Create Profile";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FullName" class="control-label"></label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Age" class="control-label"></label>
+        <input asp-for="Age" type="number" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Height" class="control-label"></label>
+        <input asp-for="Height" type="number" step="any" class="form-control" />
+        <span asp-validation-for="Height" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Weight" class="control-label"></label>
+        <input asp-for="Weight" type="number" step="any" class="form-control" />
+        <span asp-validation-for="Weight" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ShoeSize" class="control-label"></label>
+        <input asp-for="ShoeSize" class="form-control" />
+        <span asp-validation-for="ShoeSize" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="HairColor" class="control-label"></label>
+        <input asp-for="HairColor" class="form-control" />
+        <span asp-validation-for="HairColor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EyeColor" class="control-label"></label>
+        <input asp-for="EyeColor" class="form-control" />
+        <span asp-validation-for="EyeColor" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DietInfo" class="control-label"></label>
+        <input asp-for="DietInfo" class="form-control" />
+        <span asp-validation-for="DietInfo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PersonalityType" class="control-label"></label>
+        <input asp-for="PersonalityType" class="form-control" />
+        <span asp-validation-for="PersonalityType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ProfileImageUrl" class="control-label"></label>
+        <input asp-for="ProfileImageUrl" class="form-control" />
+        <span asp-validation-for="ProfileImageUrl" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
